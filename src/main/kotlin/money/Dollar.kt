@@ -1,6 +1,6 @@
 package money
 
-class Dollar(var amount: Int) {
+class Dollar(private var amount: Int) {
     override fun equals(obj: Any?): Boolean {
         return obj is Dollar && amount == obj.amount
     }
