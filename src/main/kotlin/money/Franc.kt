@@ -1,6 +1,6 @@
 package money
 
-class Franc(private val amount: Int) {
+class Franc(amount: Int): Money(amount) {
     override fun equals(obj: Any?): Boolean {
         val franc = obj as Franc?
         return amount == franc!!.amount
