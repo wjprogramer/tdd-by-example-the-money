@@ -2,7 +2,7 @@ package money
 
 class Franc(amount: Int): Money(amount) {
     override fun equals(obj: Any?): Boolean {
-        val franc: Money = obj as Franc?
+        val franc: Money? = obj as Money?
         return amount == franc!!.amount
     }
 
