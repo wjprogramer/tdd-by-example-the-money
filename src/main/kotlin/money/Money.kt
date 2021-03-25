@@ -1,4 +1,4 @@
 package money
 
-class Money {
+open class Money {
 }
