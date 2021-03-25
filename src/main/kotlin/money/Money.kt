@@ -14,4 +14,6 @@ abstract class Money(open var amount: Int) {
     }
 
     abstract fun times(multiplier: Int): Money
+
+    abstract fun currency(): String
 }
