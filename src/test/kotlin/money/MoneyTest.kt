@@ -15,15 +15,15 @@ class MoneyTest {
     fun testEquality() {
         assertTrue(Money.dollar(5) == Money.dollar(5))
         assertFalse(Money.dollar(5) == Money.dollar (6))
-        assertTrue(Franc(5) == Franc(5))
-        assertFalse(Franc(5) == Franc(6))
-        assertFalse(Franc(5) == Money.dollar(5))
+        assertTrue(Money.franc(5) == Money.franc(5))
+        assertFalse(Money.franc(5) == Money.franc(6))
+        assertFalse(Money.franc(5) == Money.dollar(5))
     }
 
     @Test
     fun testFrancMultiplication() {
-        val five = Franc(5)
-        assertEquals(Franc(10), five.times(2))
-        assertEquals(Franc(15), five.times(3))
+        val five = Money.franc(5)
+        assertEquals(Money.franc(10), five.times(2))
+        assertEquals(Money.franc(15), five.times(3))
     }
 }
