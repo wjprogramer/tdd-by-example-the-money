@@ -4,7 +4,7 @@ abstract class Money(open var amount: Int) {
     abstract val currency: String
 
     companion object {
-        fun dollar(amount: Int): Money = Dollar(amount)
+        fun dollar(amount: Int): Money = Dollar(amount, "USD")
 
         fun franc(amount: Int): Money = Franc(amount, "CHF")
     }
