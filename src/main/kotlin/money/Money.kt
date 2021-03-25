@@ -1,6 +1,6 @@
 package money
 
-open class Money(open var amount: Int) {
+abstract class Money(open var amount: Int) {
     companion object {
         fun dollar(amount: Int): Dollar = Dollar(amount)
     }
@@ -10,4 +10,6 @@ open class Money(open var amount: Int) {
                 && this.javaClass == money.javaClass
                 && amount == money.amount
     }
+
+    abstract fun times(multiplier: Int): Money
 }
