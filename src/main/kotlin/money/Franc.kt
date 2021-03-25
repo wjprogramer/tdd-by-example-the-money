@@ -1,8 +1,8 @@
 package money
 
 class Franc(amount: Int): Money(amount) {
-    override fun equals(obj: Any?): Boolean {
-        val franc: Money? = obj as Money?
+    override fun equals(money: Any?): Boolean {
+        val franc: Money? = money as Money?
         return amount == franc!!.amount
     }
 
