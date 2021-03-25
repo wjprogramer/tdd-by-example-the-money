@@ -3,6 +3,8 @@ package money
 abstract class Money(open var amount: Int) {
     companion object {
         fun dollar(amount: Int): Money = Dollar(amount)
+
+        fun franc(amount: Int): Money = Franc(amount)
     }
 
     override fun equals(money: Any?): Boolean {
