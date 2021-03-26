@@ -12,4 +12,7 @@ class Bank {
     fun rate(from: String, to: String): Int {
         return if (from == "CHF" && to == "USD") 2 else 1
     }
+
+
+    private class Pair(private val from: String, private val to: String)
 }
