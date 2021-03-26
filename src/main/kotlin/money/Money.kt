@@ -1,6 +1,6 @@
 package money
 
-abstract class Money(open var amount: Int, protected val currency: String) {
+open class Money(open var amount: Int, protected val currency: String) {
     companion object {
         fun dollar(amount: Int): Money = Dollar(amount, "USD")
 
@@ -13,7 +13,7 @@ abstract class Money(open var amount: Int, protected val currency: String) {
                 && amount == money.amount
     }
 
-    abstract fun times(multiplier: Int): Money
+    open fun times(multiplier: Int): Money? = null
 
     fun currency() = currency
 }
