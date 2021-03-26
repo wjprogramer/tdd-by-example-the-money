@@ -18,4 +18,8 @@ open class Money(open var amount: Int, protected val currency: String) {
     open fun times(multiplier: Int): Money = Money(amount * multiplier, currency)
 
     fun currency() = currency
+
+    operator fun plus(addend: Money): Money {
+        return Money(amount + addend.amount, currency)
+    }
 }
