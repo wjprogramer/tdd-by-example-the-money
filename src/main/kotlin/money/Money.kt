@@ -9,7 +9,7 @@ open class Money(open var amount: Int, protected val currency: String) {
 
     override fun equals(money: Any?): Boolean {
         return money is Money
-                && this.javaClass == money.javaClass
+                && this.currency() == money.currency()
                 && amount == money.amount
     }
 
