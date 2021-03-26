@@ -23,7 +23,8 @@ open class Money(open var amount: Int, protected val currency: String): Expressi
         return Sum(this, addend)
     }
 
-    override fun reduce(to: String): Money {
-        return this
+    override fun reduce(bank: Bank, to: String): Money {
+        val rate = if (currency == "CHF" && to == "USD") 2 else 1
+        return Money(amount / rate, to)
     }
 }
