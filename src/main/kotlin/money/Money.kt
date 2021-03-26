@@ -22,4 +22,8 @@ open class Money(open var amount: Int, protected val currency: String): Expressi
     operator fun plus(addend: Money): Expression {
         return Sum(this, addend)
     }
+
+    fun reduce(to: String): Money {
+        return this
+    }
 }
