@@ -1,6 +1,10 @@
 package money
 
+import java.util.Hashtable
+
 class Bank {
+    private val rates = Hashtable<Pair, Int>()
+
     fun reduce(source: Expression, to: String): Money {
         return source.reduce(this, to)
     }
@@ -12,7 +16,6 @@ class Bank {
     fun rate(from: String, to: String): Int {
         return if (from == "CHF" && to == "USD") 2 else 1
     }
-
 
     private class Pair(private val from: String, private val to: String) {
         override fun equals(other: Any?): Boolean {
