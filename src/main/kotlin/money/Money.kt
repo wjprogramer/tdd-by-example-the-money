@@ -19,7 +19,7 @@ open class Money(open var amount: Int, protected val currency: String) {
 
     fun currency() = currency
 
-    operator fun plus(addend: Money): Money {
+    operator fun plus(addend: Money): Expression {
         return Money(amount + addend.amount, currency)
     }
 }
