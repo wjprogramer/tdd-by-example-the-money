@@ -33,9 +33,7 @@ class MoneyTest {
 
     @Test
     fun testSimpleAddition() {
-//        val sum: Money = Money.dollar(5) + Money.dollar(5)
-//        assertEquals(Money.dollar(10), sum)
-        // opposite down, starting from assertion and backward to find(think) where it came from
+        val five: Money = Money.dollar(5)
         val sum: Expression = five.plus(five)
         val bank = Bank()
         val reduced: Money = bank.reduce(sum, "USD")
