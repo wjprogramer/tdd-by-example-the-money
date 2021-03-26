@@ -24,7 +24,7 @@ open class Money(open var amount: Int, protected val currency: String): Expressi
     }
 
     override fun reduce(bank: Bank, to: String): Money {
-        val rate = if (currency == "CHF" && to == "USD") 2 else 1
+        val rate = bank.rate(currency, to)
         return Money(amount / rate, to)
     }
 }
