@@ -1,6 +1,6 @@
 package money
 
-open class Money(open var amount: Int, protected val currency: String) {
+open class Money(open var amount: Int, protected val currency: String): Expression {
     companion object {
         fun dollar(amount: Int): Money = Money(amount, "USD")
 
