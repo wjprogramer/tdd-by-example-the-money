@@ -1,4 +1,4 @@
 package money
 
-class Sum(val augend: Money, val addend: Money) {
+class Sum(val augend: Money, val addend: Money): Expression {
 }
