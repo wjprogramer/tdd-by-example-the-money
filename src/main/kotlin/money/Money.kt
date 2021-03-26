@@ -23,7 +23,7 @@ open class Money(open var amount: Int, protected val currency: String): Expressi
         return Sum(this, addend)
     }
 
-    fun reduce(to: String): Money {
+    override fun reduce(to: String): Money {
         return this
     }
 }
