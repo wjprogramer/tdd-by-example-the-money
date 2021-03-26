@@ -1,6 +1,6 @@
 package money
 
-abstract class Money(open var amount: Int, private val currency: String) {
+abstract class Money(open var amount: Int, protected val currency: String) {
     companion object {
         fun dollar(amount: Int): Money = Dollar(amount, "USD")
 
