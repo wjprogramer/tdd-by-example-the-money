@@ -15,7 +15,7 @@ open class Money(open var amount: Int, protected val currency: String): Expressi
 
     override fun toString() = "$amount $currency"
 
-    open fun times(multiplier: Int): Expression = Money(amount * multiplier, currency)
+    override fun times(multiplier: Int): Expression = Money(amount * multiplier, currency)
 
     fun currency() = currency
 
