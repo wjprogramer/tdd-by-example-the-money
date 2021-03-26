@@ -1,6 +1,4 @@
 package money
 
-class Sum {
-    var augend: Money? = null
-    var addend: Money? = null
+class Sum(val augend: Money, val addend: Money) {
 }
