@@ -13,6 +13,8 @@ open class Money(open var amount: Int, protected val currency: String) {
                 && amount == money.amount
     }
 
+    override fun toString() = "$amount $currency"
+
     open fun times(multiplier: Int): Money? = null
 
     fun currency() = currency
