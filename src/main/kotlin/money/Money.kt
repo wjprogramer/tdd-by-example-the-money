@@ -19,7 +19,7 @@ open class Money(open var amount: Int, protected val currency: String): Expressi
 
     fun currency() = currency
 
-    operator fun plus(addend: Expression): Expression {
+    override operator fun plus(addend: Expression): Expression {
         return Sum(this, addend)
     }
 
