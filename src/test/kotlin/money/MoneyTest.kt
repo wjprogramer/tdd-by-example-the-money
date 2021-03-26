@@ -80,7 +80,7 @@ class MoneyTest {
     @Test
     fun testMixedAddition() {
         val fiveBucks: Money = Money.dollar(5)
-        val tenFrancs: Money = Money.franc(10)
+        val tenFrancs: Expression = Money.franc(10)
         val bank = Bank()
         bank.addRate("CHF", "USD", 2)
         val result = bank.reduce(fiveBucks + tenFrancs, "USD")
