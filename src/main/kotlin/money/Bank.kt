@@ -9,8 +9,8 @@ class Bank {
         return source.reduce(this, to)
     }
 
-    fun addRate(source: String, to: String, rate: Int) {
-
+    fun addRate(from: String, to: String, rate: Int) {
+        rates[Pair(from, to)] = rate
     }
 
     fun rate(from: String, to: String): Int {
